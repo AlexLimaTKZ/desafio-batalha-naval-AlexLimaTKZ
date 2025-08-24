@@ -5,43 +5,43 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // 1. Matriz 5x5 para o tabuleiro e inicializa com 0.
-    int tabuleiro[5][5] = {
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0}
-    };
-    int i, j;
-
-    // 2. Posiciona dois navios (representados pelo número 1).
-    // Navio 1 (Horizontal, 3 posições)
-    tabuleiro[1][1] = 1;
-    tabuleiro[1][2] = 1;
-    tabuleiro[1][3] = 1;
-
-    // Navio 2 (Vertical, 2 posições)
-    tabuleiro[3][3] = 1;
-    tabuleiro[4][3] = 1;
-
-    // 3. Coordenadas de cada parte dos navios.
-    printf("Coordenadas dos navios posicionados:\n");
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            if (tabuleiro[i][j] == 1) {
-                printf("Navio na posicao: [%d][%d]\n", i, j);
-            }
-        }
-    }
-
-
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+    // 1. Expande o tabuleiro para uma matriz 10x10 e inicializa com 0.
+    int tabuleiro[10][10] = {0};
+    int i, j;
+
+    // 2. Posiciona quatro navios (usando o valor 3), incluindo dois na diagonal.
+    // Navio 1 (Horizontal)
+    tabuleiro[1][1] = 3;
+    tabuleiro[1][2] = 3;
+    tabuleiro[1][3] = 3;
+
+    // Navio 2 (Vertical)
+    tabuleiro[3][8] = 3;
+    tabuleiro[4][8] = 3;
+    tabuleiro[5][8] = 3;
+
+    // Navio 3 (Diagonal Principal)
+    tabuleiro[3][2] = 3;
+    tabuleiro[4][3] = 3;
+    tabuleiro[5][4] = 3;
+
+    // Navio 4 (Diagonal Secundária)
+    tabuleiro[8][1] = 3;
+    tabuleiro[7][2] = 3;
+    tabuleiro[6][3] = 3;
+
+    // 3. Exibe o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+    printf("Tabuleiro 10x10:\n");
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 10; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }   
+        printf("\n"); // Pula para a próxima linha ao final de cada fileira
+    }
+    return 0;
+}
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
@@ -64,5 +64,3 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    return 0;
-}
