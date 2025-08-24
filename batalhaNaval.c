@@ -6,7 +6,7 @@
 
 int main() {
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
+    // Expansão do Tabuleiro e Posicionamento Diagonal
     // 1. Expande o tabuleiro para uma matriz 10x10 e inicializa com 0.
     int tabuleiro[10][10] = {0};
     int i, j;
